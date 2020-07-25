@@ -25,19 +25,17 @@ public class StudentsClassroomVerification {
         double studentLongitude = student.getLongitude();
         double classroomLatitude = classroom.getLatitude();
         double classroomLongitude = classroom.getLongitude();
-        final int earthRadius = 6367449;
+        final int earthRadius = 6371000;
 
         double latDistance = Math.toRadians(classroomLatitude - studentLatitude);
         double lonDistance = Math.toRadians(classroomLongitude - studentLongitude);
-        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+        double positionClassroom = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
                 + Math.cos(Math.toRadians(studentLatitude)) * Math.cos(Math.toRadians(classroomLatitude))
                 * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double distance = earthRadius * c; // convert to meters
+        double positionStudent = 2 * Math.atan2(Math.sqrt(positionClassroom), Math.sqrt(1 - positionClassroom));
+        double distance = earthRadius * positionStudent;
 
-        distance = Math.pow(distance, 2);
-
-        if (Math.sqrt(distance) < Math.sqrt(200)){
+        if (distance < Math.sqrt(200)){
             return true;
         }
         else {
