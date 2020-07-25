@@ -1,12 +1,12 @@
 package models;
 
-public class Student {
+public class Element {
 
     private String name;
     private double latitude;
     private double longitude;
 
-    public Student(String name, double latitude, double longitude) {
+    public Element(String name, double latitude, double longitude) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
