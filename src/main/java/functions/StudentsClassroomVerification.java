@@ -1,41 +1,45 @@
 package functions;
 
-import models.Element;
+import models.Classroom;
+import models.Student;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StudentsClassroomVerification {
 
-    public static List<Element> studentsInClasses(List<Element> studentsList, List<Element> classroomsList){
-        List<Element> studentInClass = new ArrayList<Element>();
-        for(Element student : studentsList) {
-            for(Element classroom : classroomsList) {
+    public static List<Student> studentsInClasses(List<Student> studentsList, List<Classroom> classroomsList){
+        List<Student> studentsInClass = new ArrayList<Student>();
+        for(Student student : studentsList) {
+            for(Classroom classroom : classroomsList) {
                 if(isStudentInClass(student, classroom)) {
-                    studentInClass.add(student);
+                    studentsInClass.add(student);
                     break;
                 }
             }
         }
-        return studentInClass;
+        return studentsInClass;
     }
 
-    private static boolean isStudentInClass(Element student, Element classroom) {
+    private static boolean isStudentInClass(Student student, Classroom classroom) {
         double studentLatitude = student.getLatitude();
         double studentLongitude = student.getLongitude();
         double classroomLatitude = classroom.getLatitude();
         double classroomLongitude = classroom.getLongitude();
         final int earthRadius = 6371000;
+        final int centerToEdgeWidth = 10;
+        final int centerToEdgeHeight = 10;
+        final double classroomMaxLength = Math.sqrt((Math.pow(centerToEdgeWidth,2)+Math.pow(centerToEdgeHeight,2)));
 
-        double latDistance = Math.toRadians(classroomLatitude - studentLatitude);
-        double lonDistance = Math.toRadians(classroomLongitude - studentLongitude);
-        double positionClassroom = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+        double latitudeDistance = Math.toRadians(classroomLatitude - studentLatitude);
+        double longitudeDistance = Math.toRadians(classroomLongitude - studentLongitude);
+        double positionClassroom = Math.sin(latitudeDistance / 2) * Math.sin(latitudeDistance / 2)
                 + Math.cos(Math.toRadians(studentLatitude)) * Math.cos(Math.toRadians(classroomLatitude))
-                * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+                * Math.sin(longitudeDistance / 2) * Math.sin(longitudeDistance / 2);
         double positionStudent = 2 * Math.atan2(Math.sqrt(positionClassroom), Math.sqrt(1 - positionClassroom));
         double distance = earthRadius * positionStudent;
 
-        if (distance < Math.sqrt(200)){
+        if (distance < Math.sqrt(classroomMaxLength)){
             return true;
         }
         else {
