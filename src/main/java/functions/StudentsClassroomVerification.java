@@ -39,11 +39,6 @@ public class StudentsClassroomVerification {
         double positionStudent = 2 * Math.atan2(Math.sqrt(positionClassroom), Math.sqrt(1 - positionClassroom));
         double distance = earthRadius * positionStudent;
 
-        if (distance < classroomMaxLength){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (distance < classroomMaxLength);
     }
 }

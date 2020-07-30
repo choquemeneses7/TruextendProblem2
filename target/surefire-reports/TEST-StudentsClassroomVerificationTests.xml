@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="StudentsClassroomVerificationTests" time="0.02" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="StudentsClassroomVerificationTests" time="0.016" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="BO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\Veimar\AppData\Local\Temp\surefire7472027707580562345\surefirebooter8961826220840887058.jar C:\Users\Veimar\AppData\Local\Temp\surefire7472027707580562345 2020-07-24T23-49-38_734-jvmRun1 surefire2291434913931533169tmp surefire_03463145665832194512tmp"/>
+    <property name="sun.java.command" value="C:\Users\Veimar\AppData\Local\Temp\surefire3951687397324935255\surefirebooter2968071848093365939.jar C:\Users\Veimar\AppData\Local\Temp\surefire3951687397324935255 2020-07-29T14-03-53_547-jvmRun1 surefire6674246111511922018tmp surefire_07930354102126755138tmp"/>
     <property name="surefire.test.class.path" value="D:\TrueExtend\TruextendProblem2\target\test-classes;D:\TrueExtend\TruextendProblem2\target\classes;C:\Users\Veimar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.1\junit-jupiter-engine-5.3.1.jar;C:\Users\Veimar\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Veimar\.m2\repository\org\junit\platform\junit-platform-engine\1.3.1\junit-platform-engine-1.3.1.jar;C:\Users\Veimar\.m2\repository\org\junit\platform\junit-platform-commons\1.3.1\junit-platform-commons-1.3.1.jar;C:\Users\Veimar\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Veimar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.1\junit-jupiter-api-5.3.1.jar;C:\Users\Veimar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Veimar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Veimar"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Veimar\AppData\Local\Temp\surefire7472027707580562345\surefirebooter8961826220840887058.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Veimar\AppData\Local\Temp\surefire3951687397324935255\surefirebooter2968071848093365939.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_211\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testStudentsAreNotInClasses" classname="StudentsClassroomVerificationTests" time="0.014"/>
-  <testcase name="testCase1" classname="StudentsClassroomVerificationTests" time="0"/>
-  <testcase name="testCase2" classname="StudentsClassroomVerificationTests" time="0"/>
+  <testcase name="testOneStudentInClassrooms" classname="StudentsClassroomVerificationTests" time="0.009"/>
+  <testcase name="testStudentsAreNotInClassrooms" classname="StudentsClassroomVerificationTests" time="0"/>
+  <testcase name="testThreeStudentsInClassrooms" classname="StudentsClassroomVerificationTests" time="0.001"/>
 </testsuite>
